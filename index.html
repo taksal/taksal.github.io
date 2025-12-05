@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SADA - AI Appointment Setter - Launching Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SADA – AI Appointment Setter</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    <div class="container">
-        <div class="logo-wrapper">
-            <img src="path/to/sada-logo.png" alt="Sada Logo" class="logo-image">
-        </div>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        color: white;
+    }
 
-        <h1 class="company-name">SADA</h1>
+    .logo {
+        width: 260px;
+        height: auto;
+        animation: glow 4s ease-in-out infinite;
+    }
 
-        <p class="tagline">AI Appointment Setter</p>
-
-        <p class="launch-status">LAUNCHING SOON! 🔥</p>
-
-        <form action="YOUR_FORM_ENDPOINT_HERE" method="POST" class="signup-form">
-            <input type="email" name="email" placeholder="Join the waitlist..." required>
-            <button type="submit" class="cta-button">Notify Me</button>
-        </form>
-    </div>
-
-</body>
-</html>
