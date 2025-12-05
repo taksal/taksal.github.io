@@ -1,0 +1,170 @@
+:root {
+    --primary-color: #00A388; /* Teal Accent */
+    --background-color: #F9F9F9;
+    --text-color: #333333;
+    --light-text: #555555;
+    --dark-bg: #1A202C; /* Optional dark mode for Footer/Hero */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- HEADER / NAVIGATION --- */
+.navbar {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+/* --- HERO SECTION (Main Focus) --- */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 50px;
+    padding-top: 100px; /* Adjust for navbar */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.launch-status {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.sub-headline {
+    font-size: 22px;
+    color: var(--light-text);
+    margin-bottom: 30px;
+}
+
+/* --- SIGNUP FORM & CTA --- */
+.signup-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="email"] {
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 350px;
+    max-width: 100%;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #00886F; /* Darker shade on hover */
+}
+
+.form-note {
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+/* --- APP MOCKUP (Placeholder Style) --- */
+.app-mockup {
+    width: 500px;
+    height: 300px;
+    background-color: #cccccc; /* Placeholder color */
+    border-radius: 15px;
+    margin-top: 50px;
+    /* Add a subtle shadow for depth */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--dark-bg);
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #aaaaaa;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 50px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+
+    .sub-headline {
+        font-size: 18px;
+    }
+
+    .signup-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="email"], .cta-button {
+        width: 100%; /* Full width on mobile */
+        max-width: 350px;
+    }
+
+    .app-mockup {
+        width: 90%;
+        height: 250px;
+    }
+}
