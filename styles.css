@@ -1,11 +1,13 @@
+/* Color Variables based on the logo gradient */
 :root {
-    --primary-color: #00A388; /* Teal Accent */
-    --background-color: #F9F9F9;
-    --text-color: #333333;
-    --light-text: #555555;
-    --dark-bg: #1A202C; /* Optional dark mode for Footer/Hero */
+    --black-bg: #000000;
+    --text-color: #FFFFFF;
+    --gradient-start: #00BFFF; /* Bright Cyan/Blue */
+    --gradient-end: #9933FF; /* Deep Purple */
+    --font-family: 'Inter', sans-serif;
 }
 
+/* Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,158 +15,114 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--background-color);
+    font-family: var(--font-family);
+    background-color: var(--black-bg);
     color: var(--text-color);
-    line-height: 1.6;
-}
-
-/* --- HEADER / NAVIGATION --- */
-.navbar {
-    padding: 20px 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: 900;
-    color: var(--primary-color);
-}
-
-/* --- HERO SECTION (Main Focus) --- */
-.hero-section {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px 50px;
-    padding-top: 100px; /* Adjust for navbar */
 }
 
-.hero-content {
-    max-width: 800px;
+/* --- Container (Central Alignment) --- */
+.container {
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- Logo Styling --- */
+.logo-wrapper {
+    margin-bottom: 40px;
+}
+
+.logo-image {
+    /* Set a reasonable size for the logo */
+    width: 120px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- Branding Text --- */
+.company-name {
+    font-size: 72px; /* Large and dominant */
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+    
+    /* Apply the Gradient Text Effect */
+    background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    -webkit-background-clip: text; /* Clip the background to the text shape */
+    -webkit-text-fill-color: transparent; /* Make the text itself transparent */
+    background-clip: text;
+    color: transparent; /* Fallback for non-webkit browsers */
+}
+
+.tagline {
+    font-size: 24px;
+    font-weight: 400;
+    color: #CCCCCC; /* Slightly softer white */
     margin-bottom: 40px;
 }
 
 .launch-status {
-    color: var(--primary-color);
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 10px;
     letter-spacing: 2px;
+    margin-bottom: 50px;
 }
 
-h1 {
-    font-size: 56px;
-    font-weight: 900;
-    margin-bottom: 20px;
-    line-height: 1.1;
-}
-
-.sub-headline {
-    font-size: 22px;
-    color: var(--light-text);
-    margin-bottom: 30px;
-}
-
-/* --- SIGNUP FORM & CTA --- */
+/* --- Signup Form --- */
 .signup-form {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
+    flex-direction: column;
+    gap: 15px;
 }
 
 input[type="email"] {
-    padding: 15px 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    width: 350px;
-    max-width: 100%;
+    padding: 18px 20px;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: var(--text-color);
+    background-color: #1a1a1a; /* Dark input field */
+}
+
+input[type="email"]::placeholder {
+    color: #999999;
+    font-weight: 400;
 }
 
 .cta-button {
-    background-color: var(--primary-color);
+    /* Apply the Gradient Background to the Button */
+    background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     color: white;
     border: none;
-    padding: 15px 30px;
-    border-radius: 8px;
+    padding: 18px 30px;
+    border-radius: 10px;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.2s ease-in-out;
 }
 
 .cta-button:hover {
-    background-color: #00886F; /* Darker shade on hover */
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+    box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4); /* Glow effect */
 }
 
-.form-note {
-    font-size: 14px;
-    color: var(--light-text);
-}
-
-/* --- APP MOCKUP (Placeholder Style) --- */
-.app-mockup {
-    width: 500px;
-    height: 300px;
-    background-color: #cccccc; /* Placeholder color */
-    border-radius: 15px;
-    margin-top: 50px;
-    /* Add a subtle shadow for depth */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 700;
-    font-size: 18px;
-}
-
-/* --- FOOTER --- */
-footer {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: var(--dark-bg);
-    color: #aaaaaa;
-    font-size: 14px;
-}
-
-.footer-links a {
-    color: #aaaaaa;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-/* --- Mobile Adjustments --- */
-@media (max-width: 768px) {
-    .hero-section {
-        padding-top: 50px;
+/* --- Media Query for Smaller Screens --- */
+@media (max-width: 480px) {
+    .company-name {
+        font-size: 56px;
     }
-    
-    h1 {
-        font-size: 36px;
+    .tagline {
+        font-size: 20px;
     }
-
-    .sub-headline {
-        font-size: 18px;
-    }
-
-    .signup-form {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    input[type="email"], .cta-button {
-        width: 100%; /* Full width on mobile */
-        max-width: 350px;
-    }
-
-    .app-mockup {
-        width: 90%;
-        height: 250px;
+    .logo-image {
+        width: 100px;
     }
 }
